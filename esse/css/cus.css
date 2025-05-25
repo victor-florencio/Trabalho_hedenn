@@ -1,0 +1,227 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-color: #000;
+  --text-color: #fff;
+  --input-bg: #1a1a1a;
+  --border-color: #333;
+  --input-border: #555;
+  --btn-bg: #fff;
+  --btn-color: #000;
+  --btn-hover: #ddd;
+  --link-hover: #fff;
+}
+
+[data-theme="light"] {
+  --bg-color: #f8f9fa;
+  --text-color: #111;
+  --input-bg: #fff;
+  --border-color: #ccc;
+  --input-border: #999;
+  --btn-bg: #111;
+  --btn-color: #fff;
+  --btn-hover: #333;
+  --link-hover: #111;
+}
+
+body {
+  background-color: var(--bg-color);
+  font-family: 'Inter', sans-serif;
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+.nav-elegante {
+  background-color: var(--bg-color);
+  padding: 15px 40px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid var(--text-color);
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.nav-logo {
+  color: var(--text-color);
+  font-weight: 300;
+  font-size: 1.5em;
+  text-decoration: none;
+  letter-spacing: 2px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+  flex-grow: 1;
+  justify-content: center;
+}
+
+.nav-links li a {
+  color: var(--text-color);
+  font-weight: 300;
+  font-size: 1em;
+  text-decoration: none;
+  padding: 8px 0;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--text-color);
+  transition: width 0.3s ease;
+}
+
+.nav-links li a:hover,
+.nav-links li a:focus {
+  color: #bbb;
+}
+
+.nav-links li a:hover::after,
+.nav-links li a:focus::after {
+  width: 100%;
+}
+
+.toggle-theme {
+  background-color: var(--btn-bg);
+  color: var(--btn-color);
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  flex-shrink: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+.toggle-theme:hover {
+  background-color: var(--btn-hover);
+}
+
+/* FORMULÁRIO */
+
+.form-container {
+  max-width: 400px;
+  margin: 50px auto 80px;
+  padding: 20px;
+  background-color: var(--input-bg);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  font-family: 'Inter', sans-serif;
+}
+
+.back-button {
+  display: inline-block;
+  margin-bottom: 20px;
+  color: var(--link-hover);
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 1em;
+  transition: color 0.3s ease;
+}
+
+.back-button:hover {
+  color: var(--btn-hover);
+}
+
+.form-box h2 {
+  margin-bottom: 20px;
+  font-weight: 500;
+  font-size: 1.8em;
+  color: var(--text-color);
+  text-align: center;
+}
+
+.form-box label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 1em;
+  font-weight: 500;
+  color: var(--text-color);
+}
+
+.form-box input {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 18px;
+  border: 1px solid var(--input-border);
+  border-radius: 4px;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-size: 1em;
+  transition: border-color 0.3s ease;
+}
+
+.form-box input:focus {
+  border-color: var(--btn-bg);
+  outline: none;
+}
+
+.btn-cadastro {
+  width: 100%;
+  padding: 12px;
+  background-color: var(--btn-bg);
+  color: var(--btn-color);
+  border: none;
+  border-radius: 6px;
+  font-size: 1.1em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-cadastro:hover {
+  background-color: var(--btn-hover);
+}
+
+.login-link {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 0.95em;
+}
+
+.login-link a {
+  color: var(--link-hover);
+  text-decoration: underline;
+  font-weight: 500;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.login-link a:hover {
+  color: var(--btn-hover);
+}
+
+/* Mensagens de erro PHP */
+.login-link p,
+.login-link span {
+  
+  font-weight: 600;
+  margin-bottom: 10px;
+  display: block;
+  font-size: 0.9em;
+}

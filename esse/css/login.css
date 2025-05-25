@@ -1,0 +1,278 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  :root {
+    --bg-color: #000;
+    --text-color: #fff;
+    --input-bg: #1a1a1a;
+    --border-color: #333;
+    --input-border: #555;
+    --btn-bg: #fff;
+    --btn-color: #000;
+    --btn-hover: #ddd;
+    --link-hover: #fff;
+  }
+  
+  [data-theme="light"] {
+    --bg-color: #f8f9fa;
+    --text-color: #111;
+    --input-bg: #fff;
+    --border-color: #ccc;
+    --input-border: #999;
+    --btn-bg: #111;
+    --btn-color: #fff;
+    --btn-hover: #333;
+    --link-hover: #111;
+  }
+  
+  body {
+    background-color: var(--bg-color);
+    font-family: 'Inter', sans-serif;
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+  }
+  
+  
+  
+  .nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  
+  .nav-logo {
+    color: var(--text-color);
+    font-weight: 300;
+    font-size: 1.5em;
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+    flex-grow: 1;
+    justify-content: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+  
+  .nav-links li a,
+  .dropbtn {
+    color: var(--text-color);
+    font-weight: 300;
+    font-size: 1em;
+    text-decoration: none;
+    padding: 8px 0;
+    position: relative;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links li a::after,
+  .dropbtn::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--text-color);
+    transition: width 0.3s ease;
+  }
+  
+  .nav-links li a:hover,
+  .nav-links li a:focus,
+  .dropbtn:hover,
+  .dropbtn:focus {
+    color: #bbb;
+  }
+  
+  .nav-links li a:hover::after,
+  .nav-links li a:focus::after,
+  .dropbtn:hover::after,
+  .dropbtn:focus::after {
+    width: 100%;
+  }
+  
+  .dropdown {
+    position: relative;
+  }
+  
+  .seta {
+    font-size: 0.6em;
+    line-height: 1;
+    transition: transform 0.3s ease;
+    display: inline-block;
+  }
+  
+  .submenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: var(--bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    list-style: none;
+    padding: 8px 0;
+    margin: 8px 0 0 0;
+    min-width: 140px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+    z-index: 10;
+  }
+  
+  .submenu li a {
+    display: block;
+    padding: 8px 20px;
+    color: var(--text-color);
+    font-weight: 300;
+    font-size: 0.95em;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: background-color 0.3s ease;
+  }
+  
+  .submenu li a:hover {
+    background-color: var(--input-border);
+  }
+  
+  .dropdown:hover .submenu,
+  .dropdown:focus-within .submenu {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .dropdown:hover .seta,
+  .dropdown:focus-within .seta {
+    transform: rotate(180deg);
+  }
+  
+  .toggle-theme {
+    background-color: var(--btn-bg);
+    color: var(--btn-color);
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    flex-shrink: 0;
+    font-family: 'Roboto', sans-serif;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+  
+  .toggle-theme:hover {
+    background-color: var(--btn-hover);
+  }
+  
+  .login-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 70px);
+    margin-top: 0;
+  }
+  
+  .login-form {
+    background-color: var(--input-bg);
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+    max-width: 400px;
+    width: 100%;
+  }
+  
+  .login-form h2 {
+    margin-bottom: 20px;
+    font-weight: 500;
+    font-size: 1.5em;
+    color: var(--text-color);
+    text-align: center;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+    position: relative;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 0.95em;
+    font-weight: 500;
+  }
+  
+  .form-group input {
+    width: 100%;
+    padding: 10px 40px 10px 10px;
+    background-color: var(--input-bg);
+    border: 1px solid var(--input-border);
+    border-radius: 4px;
+    color: var(--text-color);
+  }
+  
+  .toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 36px;
+    color: var(--text-color);
+    cursor: pointer;
+  }
+  
+  .btn-entrar {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--btn-bg);
+    color: var(--btn-color);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-entrar:hover {
+    background-color: var(--btn-hover);
+  }
+  
+  .login-footer {
+    margin-top: 15px;
+    font-size: 0.9em;
+    text-align: center;
+  }
+  
+  .login-footer a {
+    color: var(--text-color);
+    text-decoration: underline;
+  }
+  
+  .error-msg {
+    margin-top: 15px;
+    color: red;
+    font-size: 0.9em;
+  }
+  .back-button {
+    display: inline-block;
+    margin-bottom: 20px;
+    color: var(--link-hover);
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 1em;
+    transition: color 0.3s ease;
+  }
+  
+  .back-button:hover {
+    color: var(--btn-hover);
+  }

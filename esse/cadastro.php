@@ -10,38 +10,33 @@ include_once("code/conexao.php");
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cadastro</title>
-  <link rel="stylesheet" href="./css/cus.css">
+  <link rel="stylesheet" href="cus.css">
 </head>
 <body>
 
 <header>
    
-    <nav class="nav-elegante">
-  <div class="nav-container">
-    <a href="index.html" class="nav-logo">VerdaV</a>
-    <ul class="nav-links">
-     
-    </ul>
-    
-  </div>
-</nav>
+   <nav>
+        <div class="nav-container">
+            <a href="#" class="logo">Treedom</a>
+            
+        </div>
+    </nav>
 
 
 </header>
 
-  <div class="form-container">
+ <div class="form-container">
     <a href="index.html" class="back-button">← Voltar</a>
     <form action="cadastro.php" method="POST" class="form-box">
-      <h2>Faça sua conta</h2>
+      <h2>Cadastro</h2>
 
-      <label for="nome">Nome de usuario</label>
+      <label for="nome">Nome</label>
       <input type="text" id="nome" name="nome" required>
 
-    
       <label for="email">Email</label>
       <input type="email" id="email" name="email" required>
 
-      
       <label for="senha">Senha</label>
       <input type="password" id="senha" name="senha" required>
 
@@ -58,7 +53,7 @@ include_once("code/conexao.php");
         }
         ?>
       <a href="login.php"><span>Já possui uma conta?</span></a>
-      </div>
+    </div>
   </div>
 
 

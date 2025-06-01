@@ -17,7 +17,7 @@ if (isset($_POST['btn'])) {
     $email = mysqli_real_escape_string($conexao, $email);
 
     // Verifica se o e-mail já está cadastrado
-    $resultado = mysqli_query($conexao, "SELECT id FROM usuarios WHERE email = '$email'");
+    $resultado = mysqli_query($conexao, "SELECT email FROM usuarios WHERE email = '$email'");
     if (mysqli_num_rows($resultado) > 0) {
         $erros[] = "Este e-mail já está cadastrado.";
     }

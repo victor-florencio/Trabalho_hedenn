@@ -18,14 +18,12 @@ include("code/conexao.php");
   
 <header>
    
-    <nav class="nav-elegante">
-  <div class="nav-container">
-    <a href="index.html" class="nav-logo">Treedom</a>
-    <ul class="nav-links">
-      
-    </ul>
-    </div>
-</nav>
+    <nav>
+        <div class="nav-container">
+            <a href="#" class="logo">Treedom</a>
+            
+        </div>
+    </nav>
 
 
 </header>
@@ -40,7 +38,7 @@ include("code/conexao.php");
 
       <div class="form-group">
         <label for="email">Email</label>
-        <input type="email" id="email" name="email" required />
+        <input type="email" id="email" name="email"  required />
       </div>
 
       <div class="form-group">

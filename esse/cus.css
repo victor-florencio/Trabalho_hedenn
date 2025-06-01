@@ -64,93 +64,18 @@ nav {
       .nav-links a:hover {
           color: var(--primary);
       }
+/* FORMULÁRIO */
 
-.login-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: calc(100vh - 70px);
-  margin-top: 0;
-}
-
-.login-form {
+.form-container {
+  max-width: 400px;
+  margin: 50px auto 80px;
+  padding: 20px;
   background-color: var(--input-bg);
-  padding: 40px;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.4);
-  max-width: 400px;
-  width: 100%;
+  font-family: 'Inter', sans-serif;
 }
 
-.login-form h2 {
-  margin-bottom: 20px;
-  font-weight: 500;
-  font-size: 1.5em;
-  color: var(--text-color);
-  text-align: center;
-}
-
-.form-group {
-  margin-bottom: 20px;
-  position: relative;
-}
-
-.form-group label {
-  display: block;
-  margin-bottom: 6px;
-  font-size: 0.95em;
-  font-weight: 500;
-}
-
-.form-group input {
-  width: 100%;
-  padding: 10px 40px 10px 10px;
-  background-color: var(--input-bg);
-
-  border-radius: 4px;
-  color: var(--text-color);
-}
-
-.toggle-password {
-  position: absolute;
-  right: 10px;
-  top: 36px;
-  color: var(--text-color);
-  cursor: pointer;
-}
-
-.btn-entrar {
-  width: 100%;
-  padding: 12px;
-
-  color: var(--btn-color);
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 1em;
-  transition: background-color 0.3s ease;
-}
-
-.btn-entrar:hover {
-  background-color: var(--btn-hover);
-}
-
-.login-footer {
-  margin-top: 15px;
-  font-size: 0.9em;
-  text-align: center;
-}
-
-.login-footer a {
-  color: var(--text-color);
-  text-decoration: underline;
-}
-
-.error-msg {
-  margin-top: 15px;
-  color: red;
-  font-size: 0.9em;
-}
 .back-button {
   display: inline-block;
   margin-bottom: 20px;
@@ -162,4 +87,83 @@ nav {
 }
 
 .back-button:hover {
-  color: var(--btn-hover);}
+  color: var(--btn-hover);
+}
+
+.form-box h2 {
+  margin-bottom: 20px;
+  font-weight: 500;
+  font-size: 1.8em;
+  color: var(--text-color);
+  text-align: center;
+}
+
+.form-box label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 1em;
+  font-weight: 500;
+  color: var(--text-color);
+}
+
+.form-box input {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 18px;
+  
+  border-radius: 4px;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-size: 1em;
+  transition: border-color 0.3s ease;
+}
+
+.form-box input:focus {
+  border-color: var(--btn-bg);
+  outline: none;
+}
+
+.btn-cadastro {
+  width: 100%;
+  padding: 12px;
+ 
+  color: var(--btn-color);
+  border: none;
+  border-radius: 6px;
+  font-size: 1.1em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-cadastro:hover {
+  background-color: var(--btn-hover);
+}
+
+.login-link {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 0.95em;
+}
+
+.login-link a {
+  color: var(--link-hover);
+  text-decoration: underline;
+  font-weight: 500;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.login-link a:hover {
+  color: var(--btn-hover);
+}
+
+/* Mensagens de erro PHP */
+.login-link p,
+.login-link span {
+  
+  font-weight: 600;
+  margin-bottom: 10px;
+  display: block;
+  font-size: 0.9em;
+}

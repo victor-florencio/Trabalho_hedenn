@@ -1,14 +1,3 @@
-<?php
-include_once("code/loginC.php");
-
-
-
-if (!isset($_SESSION['nome'])) {
-    header("Location: login.php");
-    exit();
-}
-
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -34,7 +23,7 @@ if (!isset($_SESSION['nome'])) {
         }
         
         .hero {
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1469827160215-9d29e96e72f4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://cdn.shopify.com/s/files/1/0326/7189/t/65/assets/pf-77820662--OTP-Pto-M-2019-Marlondag64.jpg?v=1581959569');
             background-size: cover;
             background-position: center;
             height: 80vh;
@@ -172,105 +161,102 @@ if (!isset($_SESSION['nome'])) {
             margin-top: 0;
             color: var(--primary);
         }
-        
+        .pillar-section {
+  background: #fff;
+  padding: 60px 20px;
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.pillar-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.pillar-text h3 {
+  font-size: 1.5rem;
+  color: #1a1a1a;
+  font-weight: bold;
+}
+
+.pillar-text p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.pillar-info {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.pillar-image img {
+  max-width: 300px;
+  border-radius: 8px;
+}
+
+.pillar-content {
+  flex: 1;
+}
+
+.pillar-content h2 {
+  font-size: 2rem;
+  color: #267a6d;
+  margin-bottom: 10px;
+}
+
+.pillar-content p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.highlight {
+  color: #267a6d;
+  font-weight: bold;
+}
+
+.donate-box {
+  background: #f5f5f5;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.donate-box h3 {
+  color: #1a1a1a;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.donate-buttons {
+  margin-top: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.donate-buttons button {
+  background-color: #e0e0e0;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.donate-buttons .donate-now {
+  background-color: #ff5c5c;
+  color: #fff;
+}
         footer {
             background: var(--dark);
             color: white;
             padding: 50px 0;
             text-align: center;
         }
-         /* Dropdown container */
-.dropdown {
-  position: relative;
-}
-
-/* Link principal do dropdown */
-.dropbtn {
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  color: #fff;
-  font-weight: 300;
-  font-size: 1em;
-  text-decoration: none;
-  padding: 8px 0;
-  position: relative;
-  transition: color 0.3s ease;
-}
-
-/* Seta ao lado do texto */
-.seta {
-  font-size: 0.6em;
-  line-height: 1;
-  transition: transform 0.3s ease;
-  display: inline-block;
-}
-
-/* Submenu escondido por padrão */
-.submenu {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background: #000;
-  border: 1px solid #444;
-  border-radius: 6px;
-  list-style: none;
-  padding: 8px 0;
-  margin: 8px 0 0 0;
-  min-width: 140px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.5);
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.3s ease;
-  z-index: 10;
-}
-
-/* Itens do submenu */
-.submenu li a {
-  display: block;
-  padding: 8px 20px;
-  color: #fff;
-  font-weight: 300;
-  font-size: 0.95em;
-  text-decoration: none;
-  white-space: nowrap;
-  transition: background-color 0.5s ease;
-}
-
-.submenu li a:hover {
-  background-color: #222;
-}
-
-/* Mostrar submenu ao passar o mouse */
-.dropdown:hover .submenu,
-.dropdown:focus-within .submenu {
-  opacity: 1;
-  visibility: visible;
-}
-
-/* Seta rotaciona ao abrir */
-.dropdown:hover .seta,
-.dropdown:focus-within .seta {
-  transform: rotate(180deg);
-}
-
-/* Mantém a linha embaixo do texto no hover do link principal */
-.dropbtn::after {
-  content: '';
-  position: absolute;
-  width: 0%;
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  background-color: white;
-  transition: width 0.3s ease;
-}
-
-.dropbtn:hover::after,
-.dropbtn:focus::after {
-  width: 100%;
-}
     </style>
 </head>
 <body>
@@ -280,85 +266,85 @@ if (!isset($_SESSION['nome'])) {
             <ul class="nav-links">
                 <li><a href="#">Nosso Trabalho</a></li>
                 <li><a href="#">Sobre</a></li>
-                <li><a href="#">Porque árvores?</a></li>
+                <li><a href="why.html">Porque árvores?</a></li>
                 <li><a href="galeria.html">Galeria</a></li>
-                <li><a href="loja.php">Loja</a></li>
-
-                        <li class="dropdown">
-                <?php 
-                if(isset($_SESSION['nome'])){ ?>
-                  <a><?php echo $_SESSION['nome'];?></a>
-                <ul class="submenu">
-              <li><a href="inventario.php">inventário<span ></span></a></li>
-            <li><a href="code/logout.php">Sair<span ></span></a></li>
-              <?php } else{ ?>
-                <a href="#">Login/Cadastro <span class="seta">&#9660;</span></a>
-        <ul class="submenu">
-          <li><a href="login.php">Login</a></li>
-          <li><a href="cadastro.php">Cadastro</a></li>
-        </ul>
-        </li> <?php } ?>
-
-
-                <!-- <?php if(isset($_SESSION['nome'])){
-                  
-                  echo $_SESSION['nome'];
-                  
-                  }else{ ?>
                 <li><a href="login.php">Login</a></li>
-               <?php } ?>
-            </ul> -->
+            </ul>
         </div>
     </nav>
     
     <section class="hero">
-        <h1>RESTAURE O NOSSO AMBIENTE</h1>
+        <h1>PORQUE ARVORES?</h1>
         <p>Apoie a biodiversidade plantando árvores.</p>
         <div>
-            <a href="#" class="btn">DONATE NOW</a>
-            <a href="#" class="btn btn-outline">NEWSLETTER SIGN UP</a>
+            <a href="login.php" class="btn">COMPRE AGORA</a>
+            <a href="#" class="btn btn-outline">GANHE CARTAS COLECIONÁVEIS</a>
         </div>
     </section>
     
-    <section class="container">
-        <h2 class="section-title">OUR WORK</h2>
-        <div class="regions">
-            <div class="region-card">
-                <div class="region-img" style="background-image: url('https://images.unsplash.com/photo-1483728642387-6c3bdd6c93e5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
-                <div class="region-content">
-                    <h3>NORTH AMERICA</h3>
-                    <p>Restoring forests after wildfires and deforestation across the United States, Canada, and Mexico.</p>
-                    <a href="#" class="btn">LEARN MORE</a>
-                </div>
+    <section class="pillar-section">
+        <div class="pillar-container">
+          <div class="pillar-text">
+            <h3>Por que as árvores são importantes para o meio ambiente?</h3>
+            <p>
+                As árvores ajudam a limpar o ar que respiramos , filtram a água que bebemos e fornecem habitat para mais de 80% da biodiversidade terrestre do mundo.
+            </p>
+          </div>
+      
+          <div class="pillar-info">
+            <div class="pillar-image">
+              <img src="https://cdn.shopify.com/s/files/1/0326/7189/t/65/assets/air2x-1684511095782.jpg?v=1684511097" alt="Air Image" />
             </div>
-            
-            <div class="region-card">
-                <div class="region-img" style="background-image: url('https://images.unsplash.com/photo-1465056836041-7f43ac27dcb5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
-                <div class="region-content">
-                    <h3>LATIN AMERICA & THE CARIBBEAN</h3>
-                    <p>Supporting agroforestry and rainforest conservation in the Amazon and beyond.</p>
-                    <a href="#" class="btn">LEARN MORE</a>
-                </div>
+            <div class="pillar-content">
+              <h2>AR</h2>
+              <p>
+                As árvores ajudam a <span class="highlight">Limpar o ar</span> que respiramos. Através de suas folhas e cascas, elas absorvem poluentes nocivos e liberam oxigênio limpo para que possamos respirar. Em ambientes urbanos, as árvores absorvem gases poluentes como óxidos de nitrogênio, ozônio e monóxido de carbono, e varrem partículas como poeira e fumaça. Os níveis crescentes de dióxido de carbono causados ​​pelo  desmatamento e pela queima de combustíveis fósseis retêm o calor na atmosfera. Árvores saudáveis ​​e fortes atuam como sumidouros de carbono, compensando o carbono e reduzindo os efeitos das mudanças climáticas .
+              </p>
+              <p>
+                Os níveis crescentes de dióxido de carbono causados ​​pelo desmatamento e pela queima de combustíveis fósseis retêm o calor na atmosfera. Árvores saudáveis ​​e fortes atuam como sumidouros de carbono, compensando o carbono e reduzindo os efeitos das mudanças climáticas .
+              </p>
             </div>
-            
-            <div class="region-card">
-                <div class="region-img" style="background-image: url('https://images.unsplash.com/photo-1442570468985-f63ed5de9086?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
-                <div class="region-content">
-                    <h3>AFRICA</h3>
-                    <p>Combating desertification and supporting community-led reforestation efforts.</p>
-                    <a href="#" class="btn">LEARN MORE</a>
-                </div>
-            </div>
+          </div>
+      
+          </div>
         </div>
-    </section>
+      </section>
     
+      <section class="pillar-section">
+        <div class="pillar-container">
+          <div class="pillar-text">
+            <h3>BIODIVERSIDADE</h3>
+            <p>
+                Uma única árvore pode abrigar centenas de espécies de insetos, fungos, musgos, mamíferos e plantas. Dependendo do tipo de alimento e abrigo que necessitam, diferentes animais da floresta requerem diferentes tipos de habitat. Sem árvores, os animais da floresta não teriam um lugar para chamar de lar.
+            </p>
+          </div>
+      
+          <div class="pillar-info">
+            <div class="pillar-image">
+              <img src="https://cdn.shopify.com/s/files/1/0326/7189/t/65/assets/biodiversity2x-1684511168968.jpg?v=1684511170" alt="Air Image" />
+            </div>
+            <div class="pillar-content">
+              <h2>FLORESTAS</h2>
+              <p>
+                Florestas jovens e abertas: essas florestas surgem como resultado de incêndios ou exploração madeireira. Arbustos, gramíneas e árvores jovens atraem animais como ursos-negros, pintassilgos-americanos e pássaros-azuis na América do Norte.
+              </p>
+              <p>
+                Florestas de meia-idade: Em florestas de meia-idade, as árvores mais altas começam a crescer mais que as árvores e a vegetação mais fracas. Uma copa aberta permite o crescimento da vegetação rasteira, preferida por animais como salamandras, alces e pererecas.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
     <section class="container" style="background: var(--light); padding: 60px 20px;">
-        <h2 class="section-title">SUSTAINABILITY FOR BUSINESSES</h2>
+        <h2 class="section-title">SUSTENTABILIDADE</h2>
         <div style="max-width: 800px; margin: 0 auto; text-align: center;">
-            <p style="font-size: 1.2rem; margin-bottom: 30px;">Make a real impact and improve your company's sustainability initiatives this year.</p>
-            <a href="#" class="btn">CORPORATE SUSTAINABILITY</a>
+            <p style="font-size: 1.2rem; margin-bottom: 30px;">Faça seu próprio impacto na natureza</p>
+            <a href="login.php" class="btn">COMPRE AGORA</a>
         </div>
     </section>
+    
     
     <footer>
         <div class="container">
